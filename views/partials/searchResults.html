@@ -1,0 +1,10 @@
+<div class="container">
+    <h2 class="display-5 text-center py-3">{{datasetKeyToName dataset}} <small class="termCount">({{terms.length}} {{termCount terms.length}})</small></h2>
+    {{#if terms}}
+    <div class="card-columns">
+    {{#each terms}}
+        {{> searchResult}}
+    {{/each}}
+    </div>
+    {{/if}}
+</div>

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  server:
+    image: network-of-terms-demo-frontend:latest
+    build: .
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    entrypoint: ./docker-entrypoint.sh

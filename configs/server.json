@@ -1,0 +1,65 @@
+{
+    "server": {
+        "port": 5401,
+        "router": {
+            "stripTrailingSlash": true
+        }
+    },
+    "register": {
+        "plugins": [
+            {
+                "plugin": "hapi-pino",
+                "options": {
+                    "messageKey": "message",
+                    "useLevelLabels": true,
+                    "name": "server",
+                    "logPayload": true,
+                    "ignorePaths": ["/favicon.ico"]
+                }
+            },
+            {
+                "plugin": "@hapi/inert"
+            },
+            {
+                "plugin": "@hapi/vision"
+            },
+            {
+                "plugin": "hapi-i18n",
+                "options": {
+                    "locales": ["nl", "en"],
+                    "defaultLocale": "nl",
+                    "directory": "/usr/src/app/locales",
+                    "updateFiles": false,
+                    "objectNotation": true
+                }
+            },
+            {
+                "plugin": "./content.js"
+            },
+            {
+                "plugin": "./files.js"
+            },
+            {
+                "plugin": "./search.js",
+                "options": {
+                    "endpoint": {
+                        "baseUri": {
+                            "$filter": "env",
+                            "$default": "http://demo.netwerkdigitaalerfgoed.nl:8080/nde/graphql",
+                            "staging": "http://demo.netwerkdigitaalerfgoed.nl:8080/nde/graphql",
+                            "development": {
+                                "$env": "NOT_SERVER_URI"
+                            }
+                        },
+                        "datasetConfigUri": {
+                            "$filter": "env",
+                            "$default": "https://raw.githubusercontent.com/EnnoMeijers/nde-termennetwerk/master/conf/termennetwerk.xml",
+                            "staging": "https://raw.githubusercontent.com/EnnoMeijers/nde-termennetwerk/master/conf/termennetwerk.xml",
+                            "development": "https://raw.githubusercontent.com/EnnoMeijers/nde-termennetwerk/master/conf/termennetwerk.xml"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

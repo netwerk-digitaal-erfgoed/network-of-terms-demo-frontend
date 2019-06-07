@@ -1,0 +1,21 @@
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title"><a href="{{uri}}">{{prefLabel}}</a></h5>
+        {{#if scopeNote}}
+        <p class="card-text">{{scopeNote}}</p>
+        {{/if}}
+        {{#if altLabel}}
+        <p class="card-text"><small class="text-muted"><strong>{{i18n "search.altLabel"}}</strong>: {{formatList altLabel}}</small></p>
+        {{/if}}
+        {{#if broader}}
+        <p class="card-text"><small class="text-muted"><strong>{{i18n "search.broaderTerm"}}</strong>: {{formatList broader}}</small></p>
+        {{/if}}
+        {{#if narrower}}
+        <p class="card-text"><small class="text-muted"><strong>{{i18n "search.narrowerTerm"}}</strong>: {{formatList narrower}}</small></p>
+        {{/if}}
+        {{#if related}}
+        <p class="card-text"><small class="text-muted"><strong>{{i18n "search.relatedTerm"}}</strong>: {{formatList related}}</small></p>
+        {{/if}}
+        <button class="btn btn-secondary btn-copy" data-clipboard-text="{{uri}}">{{i18n "search.copyUri"}}</button>
+    </div>
+</div>

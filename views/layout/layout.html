@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{languageCode}}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.9/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600">
+        <link rel="stylesheet" href="/termennetwerk/assets/css/style.css?v=4">
+        <title>{{pageTitle}} | {{i18n "general.nde"}}</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-light border-bottom shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="/termennetwerk/{{languageCode}}"><img src="/termennetwerk/assets/images/{{languageCode}}/logo.png?v=2" height="30" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item{{#if navSearchActive}} active{{/if}}">
+                            <a class="nav-link" href="/termennetwerk/{{languageCode}}">Home</a>
+                        </li>
+                        <li class="nav-item{{#if navFaqActive}} active{{/if}}">
+                            <a class="nav-link" href="/termennetwerk/{{languageCode}}/faq">{{i18n "faq.title"}}</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item{{getActiveIfIsSelectedLanguage "en"}}" href="/termennetwerk/en">English</a>
+                                <a class="dropdown-item{{getActiveIfIsSelectedLanguage "nl"}}" href="/termennetwerk/nl">Nederlands</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {{{content}}}
+        <footer class="text-muted border-top">
+            <div class="container">
+                <p>{{{i18n "general.messageFooter"}}}</p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.9/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script src="/termennetwerk/assets/js/script.js?v=1"></script>
+    </body>
+</html>

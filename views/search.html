@@ -1,0 +1,37 @@
+    <div class="container px-3 pt-3 pt-md-5 pb-md-4 text-center mx-auto">
+        <div id="beta"><span class="note"><a href="/termennetwerk/{{languageCode}}/faq#prototype">{{i18n "search.messageBeta"}}</a></span></div>
+        <h1 class="display-4">{{i18n "search.title"}}</h1>
+        <p class="lead">{{i18n "search.subtitle"}}</p>
+        <div>
+            <form action="/termennetwerk/{{languageCode}}">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control form-control-lg" id="q" name="q" placeholder="{{i18n "search.placeholderQuery"}}" value="{{q}}" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <select id="datasets" name="datasets" class="form-control form-control-lg selectpicker" title="{{i18n "search.placeholderDatasets"}}" multiple required>
+                        {{#each datasets}}
+                            <option value="{{key}}"{{getSelectedIfIsSelectedDataset key}}>{{name}}</option>
+                        {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary btn-lg btn-block search" type="submit">{{i18n "search.buttonSearch"}}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {{#isSearchAction}}
+        {{#unless resultSet}}
+        <div class="container text-center">
+            <div class="alert alert-danger" role="alert">
+                {{i18n "search.messageNoResultsFound"}}
+                {{#if searchError}}<!--{{searchError}}-->{{/if}}
+            </div>
+        </div>
+        {{/unless}}
+        {{#each resultSet}}
+            {{> searchResults}}
+        {{/each}}
+    {{/isSearchAction}}
