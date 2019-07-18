@@ -40,7 +40,7 @@
                 "q2": "Hoe kan ik het prototype aanspreken?",
                 "a2": "De API van het prototype is te bereiken op de volgende locatie:</p><p><a href=\"http://demo.netwerkdigitaalerfgoed.nl:8080/nde/graphql\">http://demo.netwerkdigitaalerfgoed.nl:8080/nde/graphql</a></p><p>De <em>user interface</em> van de API is te bereiken op de volgende locatie:</p><p><a href=\"http://demo.netwerkdigitaalerfgoed.nl:8080/static/graphiql/index.html\">http://demo.netwerkdigitaalerfgoed.nl:8080/static/graphiql/index.html</a>",
                 "q3": "Is de broncode van het prototype beschikbaar?",
-                "a3": "Zeker! De broncode staat op GitHub:</p><p><a href=\"https://github.com/knaw-huc/nde-termennetwerk\">https://github.com/knaw-huc/nde-termennetwerk</a>",
+                "a3": "Zeker! De broncode staat op GitHub:</p><p><a href=\"https://github.com/netwerk-digitaal-erfgoed/nde-termennetwerk\">https://github.com/netwerk-digitaal-erfgoed/nde-termennetwerk</a>",
                 "q4": "Ik heb een technische vraag. Met wie kan ik contact opnemen?",
                 "a4": "We helpen je graag via <a href=\"mailto:tech@netwerkdigitaalerfgoed.nl\">tech@netwerkdigitaalerfgoed.nl</a>."
             }

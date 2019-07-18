@@ -53,9 +53,9 @@
                         },
                         "datasetConfigUri": {
                             "$filter": "env",
-                            "$default": "https://raw.githubusercontent.com/EnnoMeijers/nde-termennetwerk/master/conf/termennetwerk.xml",
-                            "staging": "https://raw.githubusercontent.com/EnnoMeijers/nde-termennetwerk/master/conf/termennetwerk.xml",
-                            "development": "https://raw.githubusercontent.com/EnnoMeijers/nde-termennetwerk/master/conf/termennetwerk.xml"
+                            "$default": "https://raw.githubusercontent.com/netwerk-digitaal-erfgoed/nde-termennetwerk/master/conf/termennetwerk.xml",
+                            "staging": "https://raw.githubusercontent.com/netwerk-digitaal-erfgoed/nde-termennetwerk/master/conf/termennetwerk.xml",
+                            "development": "https://raw.githubusercontent.com/netwerk-digitaal-erfgoed/nde-termennetwerk/master/conf/termennetwerk.xml"
                         }
                     }
                 }
