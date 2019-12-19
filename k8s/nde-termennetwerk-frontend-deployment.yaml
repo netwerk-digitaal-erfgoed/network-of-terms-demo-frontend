@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nde-termennetwerk-frontend-deployment
+  labels:
+    app: nde-termennetwerk-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nde-termennetwerk-frontend
+  template:
+    metadata:
+      labels:
+        app: nde-termennetwerk-frontend
+    spec:
+      containers:
+        - name: nde-termennetwerk
+          image: harbor.51-105-200-91.nip.io/nde/nde-termennetwerk-frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5401
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: NOT_SERVER_URI
+              value: http://nde-termennetwerk-service:8080/nde/graphql
+      imagePullSecrets:
+        - name: harbor-cred
