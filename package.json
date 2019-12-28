@@ -10,7 +10,7 @@
     "confidence": "4.0.2",
     "fs-extra": "8.1.0",
     "graphql-request": "1.8.2",
-    "handlebars": "4.1.2",
+    "handlebars": "4.5.3",
     "@hapi/boom": "7.4.2",
     "@hapi/glue": "6.1.0",
     "@hapi/hapi": "18.3.1",
