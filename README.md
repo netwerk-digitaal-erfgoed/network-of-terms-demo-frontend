@@ -1,5 +1,10 @@
-Front end application for demonstrating NDE's Network of Terms
-==============================
+# ⚠️ This repository is archived
+
+## Work continues in [network-of-terms-demo](https://github.com/netwerk-digitaal-erfgoed/network-of-terms-demo).
+
+---
+
+## Front end application for demonstrating NDE's Network of Terms
 
 ## Development
 
