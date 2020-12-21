@@ -19,3 +19,5 @@ RUN \
     npm install
 
 COPY . /usr/src/app
+
+ENTRYPOINT /usr/local/bin/supervisord -c /usr/src/app/configs/supervisor/${NODE_ENV}.conf
